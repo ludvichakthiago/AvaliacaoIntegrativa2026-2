@@ -34,7 +34,7 @@ export function DemoWorkspace() {
       <div><p className="nav-label">MENU PRINCIPAL</p><nav className="nav" aria-label="Navegação principal">
         {navigation.map(([id, label, icon]) => <button key={id} type="button" className={page === id ? 'active' : ''} aria-current={page === id ? 'page' : undefined} onClick={() => setPage(id)}><span aria-hidden="true">{icon}</span>{label}</button>)}
       </nav></div>
-      <div className="sidebar-bottom"><b>Um ambiente melhor começa com a escuta.</b><p>Transforme participação em decisões que fazem diferença.</p><Link href="/privacidade">Aviso de privacidade</Link><a href="/demo.html">Consultar protótipo original</a></div>
+      <div className="sidebar-bottom"><b>Um ambiente melhor começa com a escuta.</b><p>Transforme participação em decisões que fazem diferença.</p><Link href="/privacidade">Aviso de privacidade</Link><a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/demo.html`}>Consultar protótipo original</a></div>
     </aside>
     <div className="main">
       <header className="topbar"><span className="breadcrumb">Workspace / <b>{title}</b></span><div className="topbar-actions"><span className="demo-pill">Demonstração · sem integração ativa</span><ThemeToggle /></div></header>

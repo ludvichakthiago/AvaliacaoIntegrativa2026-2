@@ -13,7 +13,12 @@ npm ci
 npm run dev
 ```
 
-Abra [localhost:3000](http://localhost:3000). Para validar e executar o build:
+Abra [localhost:3000](http://localhost:3000).
+
+Para hospedar a versão estática, siga [a publicação no GitHub Pages](docs/GITHUB-PAGES.md).
+O workflow de deploy já está preparado; o GitHub deve usar **Settings → Pages → GitHub Actions**.
+
+Para validar e executar o build local:
 
 ```bash
 npm run check
